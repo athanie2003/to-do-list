@@ -22,7 +22,7 @@ addBtn.addEventListener('click', () => {
 function createItem(){
     numOfItems++;
     const div = document.createElement('div');
-    div.classList.add(`item${1}`);
+    div.classList.add(`item${numOfItems}`);
     const input = document.createElement('input');
     input.type = 'checkbox';
     const label = document.createElement('label');
@@ -37,5 +37,14 @@ function createItem(){
     textBox.value = '';
     removeBtn.addEventListener('click', (event) => {
         div.remove();
+    });
+    input.addEventListener('change', () => {
+        if(input.checked){
+            label.style.textDecoration = 'line-through';
+        }
+        else{
+            label.style.textDecoration = 'none';
+        }
+        
     });
 }
