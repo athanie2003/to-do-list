@@ -1,12 +1,13 @@
 // variables
-const body = document.querySelector('body');
+const container = document.querySelector('.container');
 const listContainer = document.createElement('div');
+listContainer.classList.add('list-container');
 const textBox = document.querySelector('.text-box');
 const addBtn = document.querySelector('.add');
 const clearBtn = document.querySelector('.clear');
 
 // add to html
-body.appendChild(listContainer);
+container.appendChild(listContainer);
 
 // load items from localStorage when page loads
 window.addEventListener('load', () => {
