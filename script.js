@@ -4,10 +4,20 @@ const listContainer = document.createElement('div');
 listContainer.classList.add('list-container');
 const textBox = document.querySelector('.text-box');
 const addBtn = document.querySelector('.add');
-const clearBtn = document.querySelector('.clear');
+const bottomBtns = document.createElement('div');
+bottomBtns.classList.add('bottom-btns');
+const editBtn = document.createElement('button');
+editBtn.innerText = 'Edit';
+editBtn.classList.add('edit');
+const clearBtn = document.createElement('button');
+clearBtn.innerText = 'Clear';
+clearBtn.classList.add('clear');
 
 // add to html
 container.appendChild(listContainer);
+container.appendChild(bottomBtns);
+bottomBtns.appendChild(editBtn);
+bottomBtns.appendChild(clearBtn);
 
 // load items from localStorage when page loads
 window.addEventListener('load', () => {
@@ -24,6 +34,17 @@ window.addEventListener('load', () => {
             label.style.textDecoration = 'line-through';
         }
     });
+});
+
+// keys
+document.addEventListener('keydown', event => {
+    const pressedKey = event.key;
+
+    if(pressedKey == 'Enter'){
+        if(textBox.value !== ''){
+            createItem(textBox.value, false);
+        }
+    }
 });
 
 // buttons

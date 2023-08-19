@@ -9,36 +9,37 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-image: linear-gradient(blueviolet, rgb(183, 43, 226));
 }
 
 h1{
     margin-top: 0;
+    font-size: 40px;
 }
 
 .container{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: beige;
+    background-color: rgb(248, 248, 229);
     border-radius: 10px;
     padding: 40px;
 }
 
+.list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .item{
-    width: 450px;
+    width: 506px;
     height: 50px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-}
-
-.remove{
-    background-color: transparent;
-    border: none;
-    margin-right: 10px;
 }
 
 .text-box{
@@ -46,4 +47,36 @@ h1{
     height: 50px;
     font-size: 24px;
     padding-left: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.add{
+    background-color: rgb(201, 27, 27);
+}
+
+button{
+    color: white;
+    font-size: 24px;
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    filter: brightness(150%);
+}
+
+.remove{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: rgb(247, 247, 247);
+    border: none;
+    border-radius: 100%;
+    margin-right: 10px;
+    color: rgb(51, 50, 50);
+    transition: background-color 0.3s;
 }
