@@ -115,10 +115,15 @@ input[type="checkbox"]{
     cursor: pointer;
     margin-left: 10px;
     position: relative;
+    transition: background-color 0.3s;
 }
 
 input[type="checkbox"]:checked {
     background-color: #7a7a7a;
+}
+
+input[type="checkbox"]:hover {
+    filter: brightness(110%);
 }
 
 /* Add checkmark icon */
