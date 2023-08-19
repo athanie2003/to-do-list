@@ -17,6 +17,7 @@ h1{
     font-size: 40px;
 }
 
+/* containers */
 .container{
     display: flex;
     flex-direction: column;
@@ -38,10 +39,12 @@ h1{
     width: 506px;
     height: 50px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     background-color: rgb(231, 231, 231);
     border-radius: 10px;
+    font-size: 24px;
+    gap: 5px;
 }
 
 .text-box{
@@ -54,6 +57,7 @@ h1{
     background-color: rgb(231, 231, 231);
 }
 
+/* buttons */
 .bottom-btns{
     display: flex;
     justify-content: flex-end;
@@ -88,5 +92,42 @@ button:hover{
     border: none;
     border-radius: 100%;
     margin-right: 10px;
-    color: rgb(51, 50, 50);
+    color: rgb(50, 50, 50);
 }
+
+/* checkboxes */
+input[type="checkbox"]{
+    /* Hide default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #7a7a7a;
+}
+
+/* Add checkmark icon */
+input[type="checkbox"]::before {
+    content: "\2713"; /* Unicode for checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    visibility: hidden;
+  }
+  
+  /* Show checkmark icon when checkbox is checked */
+  input[type="checkbox"]:checked::before {
+    visibility: visible;
+  }
