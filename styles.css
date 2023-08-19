@@ -45,6 +45,10 @@ h1{
     border-radius: 10px;
     font-size: 24px;
     gap: 5px;
+    /* move remove button to end */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
 }
 
 .text-box{
@@ -93,6 +97,7 @@ button:hover{
     border-radius: 100%;
     margin-right: 10px;
     color: rgb(50, 50, 50);
+    align-self: center;
 }
 
 /* checkboxes */
@@ -101,6 +106,7 @@ input[type="checkbox"]{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    
     width: 20px;
     height: 20px;
     border: 1px solid #3f3f3f;
