@@ -1,5 +1,5 @@
 # To-Do-List
-Add tasks to do for the day. This helps organize daily objectives
+Add tasks to do for the day. This helps organize daily objectives.
 
 ## Description
 Create a to-do list maker for users to list tasks. Allow users to add, delete, and edit tasks. User data must be saved after refreshing page.
